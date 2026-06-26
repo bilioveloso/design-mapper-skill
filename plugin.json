@@ -1,0 +1,1 @@
+{ "name": "design-mapper-skill", "description": "Intelligent design brief router — entry point for the modular design skill system. Detects signals and sequences color, effects, font, and icon skills.", "version": "1.0.0", "skills": "./" }
