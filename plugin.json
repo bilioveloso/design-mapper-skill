@@ -1,1 +1,12 @@
-{ "name": "design-mapper-skill", "description": "Intelligent design brief router — entry point for the modular design skill system. Detects signals and sequences color, effects, font, and icon skills.", "version": "1.0.0", "skills": "./" }
+{
+  "name": "design-mapper-skill",
+  "description": "Intelligent design brief router — entry point for the modular design skill system. Detects signals and sequences color, effects, font, and icon skills.",
+  "version": "1.3.0",
+  "skills": "./",
+  "dependencies": [
+    "bilioveloso/color-combo-skill",
+    "bilioveloso/design-effects-skill",
+    "bilioveloso/font-pairing-skill",
+    "bilioveloso/icon-system-skill"
+  ]
+}
