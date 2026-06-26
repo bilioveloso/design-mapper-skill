@@ -1,0 +1,32 @@
+name: New Example Run
+description: Submit a new brief → Design Route example
+title: "feat(examples): [brief type]"
+labels: ["example", "needs-review"]
+body:
+  - type: textarea
+    id: brief
+    attributes:
+      label: The brief
+      description: A realistic one-sentence brief
+    validations:
+      required: true
+  - type: dropdown
+    id: interesting
+    attributes:
+      label: Why is this example useful?
+      options:
+        - Covers a new industry not yet in the examples
+        - Demonstrates conflict resolution
+        - Accessibility-first scenario
+        - Multi-platform brief
+        - Unusual or edge-case signal combination
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: route
+    attributes:
+      label: Design Route output
+      description: Must follow the exact DESIGN ROUTE block format from SKILL.md
+    validations:
+      required: true
