@@ -10,7 +10,7 @@ description: >-
 license: MIT
 metadata:
   author: bilioveloso
-  version: "1.1.0"
+  version: "1.2.0"
   date: June 2026
   auto_mode: true
 trigger_keywords:
@@ -118,7 +118,7 @@ Read the brief for these signals. Multiple signals compound — use the stronges
 
 ### Industry / Product Signals
 
-| Signal in brief | Primary route |
+| Signal words in brief | → Route |
 |---|---|
 | dashboard, analytics, metrics, data viz, admin panel | → Corporate / Slate Command → design-effects: flat |
 | SaaS, B2B, enterprise, platform, workspace | → Corporate / Slate Command or Steel Platform |
@@ -141,10 +141,35 @@ Read the brief for these signals. Multiple signals compound — use the stronges
 | vintage brand, retro revival, heritage | → Retro / Mustard Record or Rust & Cream |
 | beauty, cosmetics, skincare, perfume | → Luxury Facade / Soft Prestige OR Gothic / Midnight Bloom |
 | kids, education, learning, playful | → Warm Tropical / Mango Shore (high energy) |
+| AI platform, chatbot, copilot, LLM, assistant | → AI-Native UI / minimal chrome, streaming text, dark preferred |
+| NFT, web3, blockchain, crypto, DeFi, wallet | → Cyberpunk / dark OLED, neon accent, trust chain visibility |
+| mental health, therapy, anxiety, depression, mindfulness app | → Healthcare / Wellness Sage, calm blue, NO motion overload |
+| smart home, IoT, home automation, connected devices | → Corporate / Ops Green (dark), real-time status pulse |
+| dating, match, swipe, relationship | → Warm Tropical / Mango Shore, card-swipe mobile, high-energy |
+| knowledge base, documentation, wiki, help center, docs | → Minimalist / Bone & Carbon, search-first, flat |
+| music streaming, playlist, audio player | → Dark OLED / Otherworldly, waveform viz, motion-driven |
+| video streaming, OTT, watch, movies, series | → Dark OLED, content carousel, cinematic |
+| podcast, episodes, audio show | → Minimalist dark, waveform player, clean |
+| food delivery, on-demand, order food | → Warm Tropical / high-energy, image-heavy, Vibrant & Block |
+| fitness, gym, workout, training, exercise | → Gaming / energetic, progress rings, gamification |
+| job board, recruitment, hiring, career, jobs | → Corporate / Steel Platform, flat, search-filter focused |
+| medical clinic, doctor, appointment, patient portal | → Healthcare / Clinical Trust, accessible, booking-forward |
+| developer tool, IDE, CLI, terminal, devtool, code editor | → Dark OLED / Otherworldly, monospace, minimal chrome |
+| cybersecurity, security, threat, vulnerability, SIEM | → Dark OLED / Otherworldly, threat viz, trust signals |
+| news, media, journalism, breaking news | → Editorial / Minimalist, content-dense, fast-loading |
+| marketing agency, growth agency, performance marketing | → Acid Contemporary / bold portfolio, results-forward |
+| personal finance, budget, expense tracker, net worth | → Corporate / Finance Trust, glass morphism, number animations |
+| remote work, collaboration, team, workspace, async | → Corporate / Steel Platform, presence indicators, real-time |
+| creator economy, creator, influencer, monetize audience | → Luxury Facade / motion-driven, profile reveals, engagement |
+| photography studio, photographer | → Minimalist / Bone & Carbon, full-bleed gallery, minimal text |
+| coworking, shared office, desk booking | → Corporate / Slate Command, amenity reveal, space tour |
+| e-learning, online course, LMS, learning platform | → Corporate / clean, progress gamification, certificate reveals |
+| legal tech, contract, compliance tool | → Corporate / Legal Anchor, flat, no decoration |
+| real estate, property listings, home buying | → Luxury / Premium, 3D tour, map-forward |
 
 ### Mood / Aesthetic Signals (override or confirm industry route)
 
-| Signal in brief | Modifier |
+| Signal words in brief | → Override |
 |---|---|
 | premium, exclusive, expensive, luxury, opulent | → confirm or upgrade to Luxury |
 | minimal, clean, whitespace, editorial | → override to Minimalist |
@@ -158,7 +183,7 @@ Read the brief for these signals. Multiple signals compound — use the stronges
 
 ### Platform / Context Signals
 
-| Signal | Effect on routing |
+| Signal | → Effect on route |
 |---|---|
 | mobile app, iOS, Android | → design-effects: suppress heavy glass, prefer subtle elevation; font-pairing: prefer Dynamic Type–friendly scales |
 | web app, SaaS, dashboard | → design-effects: glass OK, elevation-heavy layouts OK |
@@ -174,8 +199,6 @@ Read the brief for these signals. Multiple signals compound — use the stronges
 
 ## Skip Conditions
 
-Load only what's needed. Skip a skill when:
-
 | Skill | Skip when |
 |---|---|
 | color-combo-skill | Brief already specifies exact brand colors |
@@ -186,8 +209,6 @@ Load only what's needed. Skip a skill when:
 ---
 
 ## Carryover Context Rules
-
-Each skill builds on the last. Pass these carryover notes when loading each subsequent skill.
 
 ### color-combo → design-effects
 - **Warm palette** (Rustic, Tropical, Retro) → prefer soft elevation, warm shadows, no cold glass
@@ -213,8 +234,6 @@ Each skill builds on the last. Pass these carryover notes when loading each subs
 
 ## Routing Table (Full)
 
-Quick-reference for common brief types. Resolve from top; first match wins.
-
 | Brief type | color-combo | design-effects | font-pairing | icon-system |
 |---|---|---|---|---|
 | B2B SaaS dashboard | Corporate / Slate Command | flat, subtle elevation | humanist sans | stroke, medium weight |
@@ -235,9 +254,46 @@ Quick-reference for common brief types. Resolve from top; first match wins.
 
 ---
 
+## Industry Anti-Patterns
+
+Specific things that kill credibility or trust in each context. These override general taste — they are non-negotiable.
+
+| Industry / Context | Avoid |
+|---|---|
+| SaaS (General) | Excessive animation · Dark mode by default |
+| B2B / Enterprise | AI purple/pink gradients · Playful design · Hidden credentials |
+| Healthcare / Medical | Bright neon · Motion-heavy animations · AI purple/pink gradients |
+| Banking / Traditional Finance | Playful design · Poor security UX · AI purple/pink gradients |
+| Fintech / Crypto | Playful design · Unclear fees · AI purple/pink gradients |
+| Legal Services | AI purple/pink gradients · Outdated design · Hidden credentials |
+| Insurance | AI purple/pink gradients · No trust signals · Confusing pricing |
+| Government / Public Service | Ornate design · Low contrast · Motion effects · AI purple/pink gradients |
+| E-commerce Luxury | Vibrant & Block-based · Playful colors · Fast animations |
+| Mental Health App | Bright neon · Motion overload |
+| Beauty / Spa / Wellness | Bright neon · Dark mode · Harsh animations |
+| Gaming / Esports | Minimalist design · Static assets |
+| Kids / Education | Dark modes · Complex jargon · Muted colors |
+| Senior Care / Elderly | Small text · Complex navigation · AI purple/pink gradients |
+| Developer Tool / IDE | Light mode by default · Slow performance |
+| AI / Chatbot Platform | Heavy chrome · Slow response feedback |
+| Logistics / Delivery | Static tracking · No map integration · AI purple/pink gradients |
+| Restaurant / Cafe | Low-quality imagery · Outdated hours |
+| Photography Studio | Heavy text · Poor image showcase |
+| Medical Clinic / Pharma | Confusing booking · Privacy concerns · AI purple/pink gradients |
+| NFT / Web3 | Light mode default · No transaction status feedback |
+| Podcast Platform | Poor audio player · Cluttered layout |
+| Dating App | Generic profiles · No safety features visible |
+| News / Media | Cluttered layout · Slow loading |
+| Food Delivery | Muted colors · Low energy |
+| Fitness / Gym | Static design · No gamification |
+
+**"AI purple/pink gradients"** — the gradient style from AI branding (purple→pink mesh) is now associated with generic AI products. Avoid it in finance, healthcare, legal, government, and enterprise contexts where it signals "not serious."
+
+---
+
 ## Output Format
 
-After resolving the route, always emit this block verbatim before loading any skill:
+Emit this block after routing:
 
 ```
 ╔══════════════════════════════════════╗
@@ -270,110 +326,131 @@ Confidence: [HIGH / MEDIUM / LOW — how well signals matched]
 Adjustments: [anything ambiguous that the user should confirm]
 ```
 
-Then, in auto mode, proceed to load and apply each non-skipped skill immediately.
+Then emit this pre-delivery checklist:
+
+```
+PRE-DELIVERY:
+  [ ] SVG icons only — no emojis as icons (use Heroicons/Lucide)
+  [ ] cursor-pointer on all clickable elements
+  [ ] Hover states: 150–300ms transition
+  [ ] Text contrast ≥4.5:1 minimum (WCAG AA)
+  [ ] Focus states visible for keyboard nav
+  [ ] prefers-reduced-motion respected
+  [ ] Responsive: 375px / 768px / 1024px / 1440px
+  [ ] No AI purple/pink gradients in finance, healthcare, legal, or government contexts
+```
 
 ---
 
 ## Example Runs
 
-### Brief: "Design a dashboard for a B2B logistics platform. Dark mode. Needs to feel trustworthy and data-forward."
+### Example 1: B2B logistics dashboard
+
+**Brief:** "We need a dashboard for our logistics operations team — tracking shipments, delays, driver status. B2B product, used daily."
 
 ```
 ╔══════════════════════════════════════╗
 ║         DESIGN ROUTE                 ║
 ╚══════════════════════════════════════╝
-Brief:    B2B logistics dashboard, dark mode, trustworthy + data-forward
-Platform: web
+Brief:    B2B logistics ops dashboard — shipments, delays, driver status
+Platform: web app
 
 Step 1 → color-combo-skill
-  Category:  Corporate / Enterprise
-  Palette:   Slate Command (dark variant)
-  Note:      Dark palette — glass morphism preferred in effects step
+  Category:  Corporate
+  Palette:   Ops Green or Slate Command
+  Note:      Dark accent preferred; real-time status needs distinct alert colors (red/amber/green)
 
 Step 2 → design-effects-skill
-  Focus:     subtle glass morphism on data cards, clean elevation
-  Suppress:  warm shadows, decorative motion, heavy gradients
-  Note:      Heavy elevation context — icons need 2px+ stroke weight
+  Focus:     flat, data-dense layout, subtle row elevation
+  Suppress:  no glass, no heavy animation, no gradients in data cells
+  Note:      Flat palette → stroke-only icons at consistent weight
 
 Step 3 → font-pairing-skill
-  Archetype: corporate-clean
-  Priority:  body + tabular numerals for data columns
-  Note:      Humanist sans only; no serifs in this context
+  Archetype: humanist sans + tabular mono for numerics
+  Priority:  body (data legibility first)
+  Note:      Tabular nums required for shipment counts and timestamps
 
 Step 4 → icon-system-skill
-  Library:   Lucide or Phosphor
-  Weight:    stroke 2px
-  Style:     static (dashboard context)
+  Library:   Heroicons or Lucide
+  Weight:    stroke 1.5–2px
+  Style:     static
 
 Confidence: HIGH
-Adjustments: None — signals aligned well
+Adjustments: Confirm whether dark mode is required for ops environments (night shift use case)
 ```
 
 ---
 
-### Brief: "Branding for a boutique gin distillery. Should feel premium but a bit dark and mysterious."
+### Example 2: Boutique gin distillery
+
+**Brief:** "Branding and website for a small-batch gin distillery. Very craft, botanical, a little dark and mysterious."
 
 ```
 ╔══════════════════════════════════════╗
 ║         DESIGN ROUTE                 ║
 ╚══════════════════════════════════════╝
-Brief:    Boutique gin distillery — premium, dark, mysterious
-Platform: print + web
+Brief:    Small-batch gin distillery — craft, botanical, dark/mysterious
+Platform: web (marketing site)
 
 Step 1 → color-combo-skill
-  Category:  Gothic / Dark Romance
-  Palette:   Bone & Wine
-  Note:      Dark warm palette — glass morphism optional; prefer editorial flat
+  Category:  Rustic / Gothic hybrid
+  Palette:   Smoked Oak OR Bone & Wine
+  Note:      Dark background with botanical accent (deep green or aged gold); warm shadows forward
 
 Step 2 → design-effects-skill
-  Focus:     editorial flat with subtle texture; dark shadows
-  Suppress:  bright glass, animated motion, neon
-  Note:      Minimal icons; serif-heavy type will dominate
+  Focus:     hero gradient, textured overlays, warm shadow elevation
+  Suppress:  no cold glass, no neon glow, no flat corporate layout
+  Note:      Dark palette → glass morphism optional on hero only; prefer texture
 
 Step 3 → font-pairing-skill
-  Archetype: editorial-dark
-  Priority:  high-contrast display serif + light body
-  Note:      Refined palette — icon use should be minimal or none
+  Archetype: editorial serif display + humanist body
+  Priority:  display (brand identity weight)
+  Note:      Slab or transitional serif for headings; legible humanist for body copy
 
-Step 4 → icon-system-skill   [SKIP — branding/print context; no UI components]
+Step 4 → icon-system-skill
+  Library:   hand-drawn stroke set or Phosphor (thin weight)
+  Weight:    stroke 1.5px
+  Style:     static
 
 Confidence: HIGH
-Adjustments: If web presence includes e-commerce, reload icon-system for cart/nav icons
+Adjustments: Confirm if e-commerce (bottle shop) is in scope — would add card layout requirements
 ```
 
 ---
 
-### Brief: "Gaming peripheral brand targeting competitive players. Think RGB, dark, aggressive."
+### Example 3: Gaming peripheral brand
+
+**Brief:** "Website for a gaming peripherals brand — keyboards, mice, headsets. Target audience: competitive PC gamers."
 
 ```
 ╔══════════════════════════════════════╗
 ║         DESIGN ROUTE                 ║
 ╚══════════════════════════════════════╝
-Brief:    Gaming peripheral brand — RGB, dark, competitive, aggressive
-Platform: web
+Brief:    Gaming peripheral brand website — keyboards, mice, headsets; competitive PC audience
+Platform: web (product/marketing site)
 
 Step 1 → color-combo-skill
-  Category:  Gaming / Esports
-  Palette:   Cyber Arena
-  Note:      Dark neon palette — heavy glass morphism in effects step
+  Category:  Gaming
+  Palette:   Cyber Arena or Shadow Protocol
+  Note:      Dark OLED base; neon accent (cyan or electric lime); RGB-suggest color roles
 
 Step 2 → design-effects-skill
-  Focus:     glass morphism, neon glow, RGB border animation
-  Suppress:  warm shadows, serif type integration, soft gradients
-  Note:      Heavy animated context — icons should be animated/filled
+  Focus:     glass morphism on product cards, neon glow on CTA, scroll-driven motion
+  Suppress:  no warm shadows, no soft pastels, no flat corporate layout
+  Note:      Animated effects active → animated icons or Lottie for key interactive moments
 
 Step 3 → font-pairing-skill
-  Archetype: gaming-display
-  Priority:  geometric display (headings) + sans body
-  Note:      High-contrast bold; no humanist warmth
+  Archetype: geometric display + geometric sans body
+  Priority:  display (product names, hero headlines)
+  Note:      Avoid humanist; geometric or condensed display only
 
 Step 4 → icon-system-skill
-  Library:   Lordicon (animated) or Phosphor (bold filled)
-  Weight:    bold filled
-  Style:     animated for hero elements, static for nav
+  Library:   Lordicon or Lucide (dark-optimized)
+  Weight:    filled, bold stroke (2px+)
+  Style:     animated on hover for hero icons
 
 Confidence: HIGH
-Adjustments: None
+Adjustments: Confirm whether product configurator (RGB customizer) is in scope — affects motion budget
 ```
 
 ---
