@@ -1,5 +1,7 @@
 # Design Mapper Skill
 
+![design-mapper-skill banner](assets/banner.svg)
+
 **The entry point for a modular AI design system.** Give it a brief — any brief — and it figures out which design skills to load, in what order, and what to focus on. Then it loads them automatically.
 
 ---
