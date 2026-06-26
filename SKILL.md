@@ -10,7 +10,7 @@ description: >-
 license: MIT
 metadata:
   author: bilioveloso
-  version: "1.2.0"
+  version: "1.3.0"
   date: June 2026
   auto_mode: true
 trigger_keywords:
@@ -72,7 +72,48 @@ When this skill is first loaded in a new session, before processing any design b
    ```
 4. **If the user says no**, proceed. The mapper will fetch companion skills from the web when routing — installation is optional.
 
-**Only ask once per session.** If a design brief was already given before the skill loaded, skip the prompt and go straight to routing.
+**Only ask once per session.** Always offer companions and wait for the user's reply before proceeding — even when a design brief was passed at load time alongside the trigger.
+
+---
+
+## Brief Interview
+
+After the companion offer is resolved, **run a targeted interview before routing.**
+The goal is to fill any gaps the brief leaves — not to ask what you already know.
+
+**Auto-fill rule:** scan the brief and pre-fill answers you can infer with high
+confidence. Show pre-filled answers marked ✓ so the user can correct them.
+Only ask questions that are genuinely open.
+
+Ask all open questions in **a single message**. Wait for the reply, then route.
+
+### The 5 questions
+
+| # | Question | Auto-fill when brief contains… |
+|---|---|---|
+| 1 | **Primary audience** — who will use this? (role, context, sophistication) | any audience / user description |
+| 2 | **Three adjectives** describing the feeling (e.g. "premium, calm, technical") | mood words, style descriptors, vibe language |
+| 3 | **Existing brand colors or assets** to respect? (paste hex or say none) | specific hex values, "our brand colors are…" |
+| 4 | **One or two reference sites you like + one you'd avoid** (URLs or names) | "like X", "inspired by", "not like Y" |
+| 5 | **Platform** — web / mobile app / both / print | any platform mention |
+
+**If all 5 are already answered** from the brief, skip the interview entirely.
+Say "I have everything I need from your brief — routing now." and proceed immediately.
+
+**If 1–4 are answered**, only ask the open ones. Never re-ask what the brief answered.
+
+### Interview message format
+
+```
+Before I route, I have [N] quick question(s):
+
+✓ Platform: web (from your brief)
+✓ Feeling: futuristic, personal, premium (from your brief)
+
+❓ Primary audience — who will use this? (role, context, sophistication level)
+❓ Any existing brand colors or assets to respect? (paste hex or say "none")
+❓ One reference you love the look of + one to avoid
+```
 
 ---
 
@@ -101,14 +142,13 @@ Pass the carryover context from the route when applying each skill (see Carryove
 
 When you receive a design brief:
 
-1. **Detect signals** from the brief using the Signal Detectors below.
-2. **Resolve the route** using the Routing Table.
-3. **Emit the Design Route block** (template at the end).
-4. **Auto mode:** load each non-skipped skill in order, reading the carryover notes before each one.
-5. **Skip any skill** that has a skip condition (listed per skill below).
-
-Do not ask clarifying questions before emitting the route. Emit the best route you
-can from the brief, then offer to adjust.
+1. **Companion offer** — offer companion skills (see On First Load above). Wait for reply.
+2. **Brief Interview** — run the targeted interview (see Brief Interview above). Wait for reply. If brief already answers all 5 questions, skip and proceed immediately.
+3. **Detect signals** from the brief + interview answers using the Signal Detectors below.
+4. **Resolve the route** using the Routing Table.
+5. **Emit the Design Route block** (template at the end).
+6. **Auto mode:** load each non-skipped skill in order, reading the carryover notes before each one.
+7. **Skip any skill** that has a skip condition (listed per skill below).
 
 ---
 
