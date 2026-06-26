@@ -1,0 +1,25 @@
+# Design Skill System — Index for AI Agents
+
+Load design-mapper-skill FIRST on any design brief. It reads signals and routes to the right skills in order.
+
+## Skills
+
+design-mapper-skill
+  Entry point router for the modular design skill system. Takes a design brief, detects industry/mood/platform signals, and emits a structured DESIGN ROUTE block telling the agent which skills to load, in what order, with what focus. Always load this skill first on any design brief.
+  Triggers: design a, design brief, create UI, branding for, visual identity, what should it look like, how should it look, UI for, app design, website design, /design, /mapper.
+
+color-combo-skill
+  Color palette selection across 161 palettes in 16 categories. Includes WCAG contrast ratios (AA/AAA), CSS custom property templates, dark mode variants, gradient pairs with CSS snippets, brand archetype guide, and seasonal palettes. Use when choosing colors, palettes, or visual mood for any project.
+  Triggers: color, palette, color scheme, what colors, brand colors, dark mode palette, contrast, gradient, WCAG, pick a color, color for, /color, /color-combo.
+
+design-effects-skill
+  Visual effects, animation patterns, morphism systems (glass, clay, neuo), and interaction states. Covers shader gradients, scroll animations, micro-interactions, page-type recipes (SaaS, gaming, wellness, portfolio), and dark mode motion guidance. Use when choosing or implementing visual effects, animated backgrounds, or UI depth systems.
+  Triggers: animation, glassmorphism, neumorphism, claymorphism, visual effect, liquid glass, shader gradient, motion, micro-interaction, hover effect, scroll animation, animated background, page recipe, /design-effects-skill.
+
+font-pairing-skill
+  Typeface selection, pairing rules, type scale, variable font guidance, and loading strategy. Covers display serifs, sans-serifs, body faces, monospace, and archetype recipes matched to brand tier and palette. Use when choosing or pairing fonts for any project.
+  Triggers: font, typeface, font pairing, heading font, body font, type scale, variable font, web font, Google Fonts, what font, choose a font, /font-pairing-skill.
+
+icon-system-skill
+  Icon library selection, sizing system (optical not mathematical), stroke vs fill decisions, color inheritance via currentColor, icon weight matching to typography, and animated icon patterns. Covers Lucide, Phosphor, Heroicons, Radix, and Lordicon. Use when choosing or implementing an icon system for any UI project.
+  Triggers: icon, icon library, icon set, icon size, icon weight, icon animation, stroke icon, fill icon, SVG icon, Lucide, Phosphor, Heroicons, /icon-system-skill.
