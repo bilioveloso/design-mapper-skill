@@ -6,6 +6,36 @@
 
 ---
 
+## Installing
+
+### Full system (recommended)
+
+```bash
+npx skills add bilioveloso/design-mapper-skill
+npx skills add bilioveloso/color-combo-skill
+npx skills add bilioveloso/design-effects-skill
+npx skills add bilioveloso/font-pairing-skill
+npx skills add bilioveloso/icon-system-skill
+```
+
+On first use, the mapper will also ask if you want to install the companions — but running all five commands above gets you everything immediately.
+
+### Mapper only
+
+```bash
+npx skills add bilioveloso/design-mapper-skill
+```
+
+The mapper fetches companion skills directly from GitHub when routing if they aren't installed locally. Installation is optional.
+
+### Claude Code plugin marketplace
+
+```
+/plugin marketplace add bilioveloso/design-mapper-skill
+```
+
+---
+
 ## The problem this solves
 
 Good design decisions compound. The palette you choose should inform your effects. The effects should inform your icon weight. The fonts should match the palette mood. But without a coordinator, each decision gets made in isolation and you end up with a glass morphism card next to a slab serif over a pastel gradient — individually reasonable, collectively incoherent.
@@ -50,7 +80,11 @@ design-mapper-skill          ← you are here
 Website + print collateral."
 ```
 
-### 2. It detects signals and resolves the route
+### 2. It offers companions, then interviews you
+
+On first load the mapper offers to install the companion skills (always — even if you passed a brief inline). Once that's resolved, it runs a brief interview: up to 5 targeted questions about audience, mood adjectives, existing brand colors, reference sites, and platform. Questions already answered by the brief are pre-filled and shown as ✓ — it only asks what's genuinely open.
+
+### 3. It detects signals and resolves the route
 
 The mapper reads for three types of signals:
 - **Industry** — craft brewery, spirits, bar → Gothic or Rustic
@@ -59,7 +93,7 @@ The mapper reads for three types of signals:
 
 When signals conflict, explicit rules resolve them. Mood overrides industry. Accessibility overrides everything.
 
-### 3. It emits a Design Route
+### 4. It emits a Design Route
 
 ```
 ╔══════════════════════════════════════╗
@@ -89,47 +123,11 @@ Confidence: HIGH
 Adjustments: If the web presence includes e-commerce, reload icon-system for cart/nav
 ```
 
-### 4. It applies each skill in sequence (auto mode)
+### 5. It applies each skill in sequence (auto mode)
 
 After emitting the route, the mapper automatically loads and applies each skill in order — reading from your local `~/.claude/skills/` directory if installed, or fetching directly from GitHub if not. Each skill receives the carryover context from the step before it.
 
 To get the route only without auto-applying: say *"just route, don't apply"*.
-
----
-
-## Installing
-
-### Full system (recommended)
-
-Install the mapper first. On first load it will offer to install the companion skills:
-
-```bash
-npx skills add bilioveloso/design-mapper-skill
-```
-
-Or install everything at once:
-
-```bash
-npx skills add bilioveloso/design-mapper-skill
-npx skills add bilioveloso/color-combo-skill
-npx skills add bilioveloso/design-effects-skill
-npx skills add bilioveloso/font-pairing-skill
-npx skills add bilioveloso/icon-system-skill
-```
-
-### Claude Code plugin marketplace
-
-```
-/plugin marketplace add bilioveloso/design-mapper-skill
-```
-
-### Install individual skills only
-
-Each skill is independently installable. If you only need color palettes:
-
-```bash
-npx skills add bilioveloso/color-combo-skill
-```
 
 ---
 
