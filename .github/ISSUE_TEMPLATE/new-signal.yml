@@ -1,0 +1,38 @@
+name: New Signal Mapping
+description: Suggest a new industry or mood keyword mapping
+title: "feat(signals): [keyword] → [Category]"
+labels: ["signal-mapping", "needs-review"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Signal type
+      options:
+        - Industry / Product signal
+        - Mood / Aesthetic signal
+        - Platform / Context signal
+    validations:
+      required: true
+  - type: textarea
+    id: keywords
+    attributes:
+      label: Keywords to detect
+      description: Natural language terms an agent might see in a brief
+      placeholder: "e.g. fintech, robo-advisor, investment app"
+    validations:
+      required: true
+  - type: input
+    id: route
+    attributes:
+      label: Suggested route
+      description: "Which category/palette does this map to?"
+      placeholder: "e.g. → Corporate / Finance Trust"
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why this mapping?
+      description: Explain the reasoning so it can be evaluated
+    validations:
+      required: true
