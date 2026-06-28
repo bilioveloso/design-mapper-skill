@@ -495,6 +495,21 @@ Adjustments: Confirm whether product configurator (RGB customizer) is in scope �
 
 ---
 
+## Anti-Slop Gate
+
+**Always apply `design-anti-slop` as the final step of every design route.**
+
+After the skill chain (color → effects → fonts → icons) produces output, check it
+against the 7 cardinal sins before delivering. This is not optional — it is the
+quality gate that separates a designed artifact from a generated template.
+
+Load: `design-anti-slop` skill.  
+Run: the 10-item checklist at the bottom of that file.  
+Block: any P0 violation (indigo default, trust gradient, emoji icons, AI dashboard tile,
+invented metrics, filler copy, wrong display font).
+
+---
+
 ## Maintained by
 
 [@bilioveloso](https://github.com/bilioveloso) — part of the modular design skill system.
